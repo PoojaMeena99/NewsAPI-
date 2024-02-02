@@ -1,0 +1,129 @@
+.html .body{
+    padding: 0px;
+    margin: 0px;
+}
+.container-fluid{
+  border: 2px solid black;
+  margin: 0px;
+}
+@media (max-width: 576p){
+    .container-fluid{
+        border: 2px solid black;
+        display: flex;
+        margin: auto;
+    }
+}
+.header{
+    width: 562.29138px;
+    height: 118px;
+    border: 2px solid red;
+    display: flex;
+     margin: auto;
+    margin-top:32px;
+    margin-bottom: 32px;
+   
+}
+@media (max-width: 576px){
+    .header{
+        width:100%;
+        height: 73px;
+        border: 2px solid red;
+        justify-content: center;
+    }
+}
+.headertext{
+    color: var(--Dark, #3C3030);
+    font-family: "Iowan Old Style";
+    font-size: 84px;
+    font-style: normal;
+    font-weight: 400;
+    Line-height:117.6px;
+    padding-top: 5px;
+}
+@media (max-width: 576px){
+    .headertext{
+      color: var(--Dark, #3C3030);
+      font-family: "Iowan Old Style";
+      font-size: 35.957px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 140%; 
+      align-items: center;
+    }
+}
+.logo{
+  width:60PX;
+  height:60px;
+  border:circle;
+  background-color:#E84848;
+  border-radius: 50%;
+  display: inline-block;
+  margin:auto;
+  margin-left:0px;
+  margin-right:0px;
+}
+@media (max-width: 576px){
+  .logo{
+      width:25.8086PX;
+      height:25.8086PX;
+      border:circle;
+      background-color:#E84848;
+      border-radius: 50%;
+      display: inline-block;
+      align-items: center;
+  }
+
+}
+.searchbar{
+    border:1px solid #3C3030;
+    width: 327px;
+    height: 61px;
+    margin: auto;
+    margin-top: 32px;
+    margin-bottom: 32px;
+}
+.Gobtn{
+    width:59px;
+    height: 59px;
+    float:right;
+    background-color: #E84848;
+    color:white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.div{
+    border:2px solid purple;
+    height: 1387px;
+    width: 910px;
+    margin: auto;
+    padding: 0px; 
+} 
+@media(max-width: 576px){
+    .div{
+    height: auto;
+    width:auto;
+} 
+}
+.row{
+    border: yellowgreen 2px solid; 
+    /* justify-content:space-between; 
+    margin:0px;
+    padding: 0px; */
+} 
+
+#box{
+    border:2px solid black;
+    height:408px;
+    width:300px;
+    padding: 0px;
+    margin: 0px;
+}
+@media(max-width: 576px){
+    #box{
+    margin: auto;
+    width:364px;
+    height:398px;
+    }  
+} 
