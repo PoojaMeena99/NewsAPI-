@@ -1,129 +1,131 @@
-.html .body{
-    padding: 0px;
-    margin: 0px;
+@import"bootstrap/dist/css/bootstrap.min.css";
+
+.container-fluid {
+    padding:20px 0px 0px 0px;
 }
-.container-fluid{
-  border: 2px solid black;
-  margin: 0px;
-}
-@media (max-width: 576p){
-    .container-fluid{
-        border: 2px solid black;
-        display: flex;
-        margin: auto;
-    }
-}
-.header{
-    width: 562.29138px;
-    height: 118px;
-    border: 2px solid red;
-    display: flex;
-     margin: auto;
-    margin-top:32px;
-    margin-bottom: 32px;
-   
-}
-@media (max-width: 576px){
-    .header{
-        width:100%;
-        height: 73px;
-        border: 2px solid red;
-        justify-content: center;
-    }
-}
-.headertext{
-    color: var(--Dark, #3C3030);
-    font-family: "Iowan Old Style";
+
+.heardertext{
+    font-family:"Iowan Old Style";
     font-size: 84px;
-    font-style: normal;
     font-weight: 400;
-    Line-height:117.6px;
-    padding-top: 5px;
 }
-@media (max-width: 576px){
-    .headertext{
-      color: var(--Dark, #3C3030);
-      font-family: "Iowan Old Style";
-      font-size: 35.957px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: 140%; 
-      align-items: center;
+@media (max-width:576px){
+    .heardertext{
+        font-size: 36px;
+        font-weight:400;
     }
+}
+.div{
+    border:1px solid black;
+    margin-bottom: 2px;
 }
 .logo{
-  width:60PX;
-  height:60px;
-  border:circle;
-  background-color:#E84848;
-  border-radius: 50%;
-  display: inline-block;
-  margin:auto;
-  margin-left:0px;
-  margin-right:0px;
+    padding-bottom: 10px;
 }
 @media (max-width: 576px){
-  .logo{
-      width:25.8086PX;
-      height:25.8086PX;
-      border:circle;
-      background-color:#E84848;
-      border-radius: 50%;
-      display: inline-block;
-      align-items: center;
-  }
-
+    .logo{
+        width: 30px;
+        height: 40px;
+        margin:4px;
+    }
 }
-.searchbar{
-    border:1px solid #3C3030;
-    width: 327px;
-    height: 61px;
-    margin: auto;
-    margin-top: 32px;
-    margin-bottom: 32px;
+.searchrow{
+    border: 1px solid #3C3030;
+    margin:85px auto 85px auto;
+    /* width:350px; */
+    /* height:61px; */
+    padding:0px;
+}
+@media (max-width: 576px){
+    .searchrow{
+          margin:60px auto 60px auto;
+    }
+}
+.search{
+    padding:0px;
+    margin-top:30px;
+}
+/* .imag{
+    margin-top: 15px;
+    margin-right:5px;
+} */
+.form-control{
+    height:61px;
+    width: 250px;
+    padding-left:350px;
+    border:2px solid blue;
 }
 .Gobtn{
-    width:59px;
-    height: 59px;
-    float:right;
     background-color: #E84848;
+    width: 62px;
+    height: 100%;
     color:white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+}  
+.newsheading{
+    color:#D02424;
+    margin-bottom:10px;
 }
-
-.div{
-    border:2px solid purple;
-    height: 1387px;
-    width: 910px;
-    margin: auto;
-    padding: 0px; 
-} 
-@media(max-width: 576px){
-    .div{
-    height: auto;
+.container{
+    width:940px;
+    margin-bottom: 90px;
+    /* border: red 2px solid; */
+}
+@media (max-width: 576px){
+    .container{
+        width: 364px;
+        margin-bottom: 0px;
+    }
+}
+.gridcol{
+    border: 1px solid #3C3030;
+    height: 408px;
+    margin-bottom:40px ;
+}
+@media (max-width: 576px) {
+    .col{
+        height:354px;
+        border: 1px solid #3C3030;
+        margin-bottom: 48px;
+    }
+}
+.footer{
+    border-top:2px black solid;
+}
+.footercontainer{
     width:auto;
-} 
+    margin-top: 60px;
+    margin-bottom:60px ;
 }
-.row{
-    border: yellowgreen 2px solid; 
-    /* justify-content:space-between; 
-    margin:0px;
-    padding: 0px; */
-} 
-
-#box{
-    border:2px solid black;
-    height:408px;
-    width:300px;
-    padding: 0px;
-    margin: 0px;
+@media (max-width: 576px) {
+    .footercontainer{
+        flex-flow: row wrap;
+        width:180px;
+        margin-top: 28px;
+        margin-bottom:28px ;
+    }
 }
-@media(max-width: 576px){
-    #box{
-    margin: auto;
-    width:364px;
-    height:398px;
-    }  
-} 
+.footerdiv{
+    font-weight: 500;
+    font-size: 16px;
+    width:auto;
+}
+.footeridiv2{
+    color:#3C3030;
+    font-family: "Inria Serif";
+    font-size: 16px;
+    font-weight: 500;  
+    padding-left:2px ;
+}
+@media (max-width: 576px) {
+    .footeridiv2{
+        width:180px;
+        padding:0px 10px 0px 10px;
+    }
+}
+.footerimg{
+    border-radius: 50%;
+    background-color: #E84848;
+    width: 10px;
+    height: 10px;
+    margin:2px;
+}
