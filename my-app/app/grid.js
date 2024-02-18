@@ -1,29 +1,16 @@
-import React from 'react'
+import React from "react";
+import Article_row from "./article_row";
 
 function Grid() {
   return (
-    <>
-        <div className='container'>
-            <div className='row newsheading d-sm-none '>
-                <span>TOP NEWS FROM INDIA</span>
-            </div>
-            <div className='row'>
-                <div class="col-12 col-sm-4 gridcol"></div>
-                <div class="col-12 col-sm-4 gridcol"></div>
-                <div class="col-12 col-sm-4 gridcol"></div>
-            </div>
-            <div className='row'>
-                <div class="col-12 col-sm-4 gridcol"></div>
-                <div class="col-12 col-sm-4 gridcol"></div>
-                <div class="col-12 col-sm-4 gridcol"></div>
-            </div>
-            <div className='row '>
-                <div class="col-12 col-sm-4 gridcol"></div>
-                <div class="col-12 col-sm-4 gridcol"></div>
-                <div class="col-12 col-sm-4 gridcol"></div>
-            </div>
-        </div>
-    </>
-  )
+    <div className="container">
+      <div className="row news_heading ">
+        <span>TOP NEWS FROM INDIA</span>
+      </div>
+      <Article_row />
+      <Article_row />
+      <Article_row />
+    </div>
+  );
 }
-export default Grid
+export default Grid;

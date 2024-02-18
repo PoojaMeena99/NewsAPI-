@@ -1,27 +1,27 @@
 const Header = () => {
-    return (
-        <>
-            <div className='container-fluid '>
-                <div className='row justify-content-center header'>
-                    <div className='text-center heardertext'>
-                        <span>NewsAPI</span>
-                        <img className="logo" src="logo.png" />
-                        <span>Org</span>
-                    </div>
-                </div>
-                <div className="div"></div>
-                <div className="div"></div>
+  return (
+    <>
+      <div className="container-fluid">
+        <div className="row justify-content-center">
+          <div className="text-center hearder_text">
+            <span>NewsAPI</span>
+            <img className="header_icon" src="logo.png" />
+            <span>Org</span>
+          </div>
+        </div>
+        <div className="border_div"></div>
+        <div className="border_div"></div>
 
-                <div className="row d-flex justify-content-center align-items-center searchrow ">
-                    {/* <div className="d-flex search"> */}
-                        <div><img className="imag" src="search.png" />
-                        <input type="text" class="form-control " placeholder="search..." /></div>
-                        <div className="Gobtn d-flex justify-content-center align-items-center">Go</div>
-                    {/* </div> */}
-                </div>
-            </div>
-        </>
-    )
-}
+        <div className="row justify-content-center search_row">
+          <div className="search_box">
+            <img className="imag" src="search.png" />
+            <input className="input_box" type="text" placeholder="Search.." />
+          </div>
+          <button className="go_btn">GO</button>
+        </div>
+      </div>
+    </>
+  );
+};
 
 export default Header;
