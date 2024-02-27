@@ -1,5 +1,5 @@
 const 
-article_data=[{
+articles=[{
     image:"one.png",
     title:"Echoes of Defeat: A Personal Reflection on India’s 2023 World Cup Loss",
     discription:"The first one read, “India's loss in the 2023 World Cup final has echoes of West Indies' defeat in the 1983 World Cup final.” The parallels are .....",
@@ -63,4 +63,4 @@ article_data=[{
 
 }
 ]
-export default article_data;
+export default articles;
