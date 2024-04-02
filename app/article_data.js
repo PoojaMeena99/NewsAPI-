@@ -4,7 +4,6 @@ articles=[{
     title:"Echoes of Defeat: A Personal Reflection on India’s 2023 World Cup Loss",
     discription:"The first one read, “India's loss in the 2023 World Cup final has echoes of West Indies' defeat in the 1983 World Cup final.” The parallels are .....",
     url:"https://medium.com/@gouravmodi/echoes-of-defeat-a-personal-reflection-on-indias-2023-world-cup-loss-3177e485c1a0"
-
 },
 {
     image:"two.jpg",

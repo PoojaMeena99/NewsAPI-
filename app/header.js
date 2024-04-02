@@ -11,14 +11,6 @@ const Header = () => {
         </div>
         <div className="border_div"></div>
         <div className="border_div"></div>
-
-        <div className="row justify-content-center search_row">
-          <div className="search_box">
-            <img className="imag" src="search.png" />
-            <input className="input_box" type="text" placeholder="Search.." />
-          </div>
-          <button className="go_btn">GO</button>
-        </div>
       </div>
     </>
   );
