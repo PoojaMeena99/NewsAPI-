@@ -20,9 +20,10 @@ function page() {
         console.log(data, "response");
         const articlesData = data.articles;
 
-        for (let i = 0; i < articlesData.length; i++) {
-          const article = articlesData[i];
-          console.log(article, "article[i]");
+        let article;
+        for (let item of articlesData) {
+          article = item;
+          console.log(article, "articlesData[item]");
 
           const articleObject = {
             image: article.urlToImage,
@@ -32,6 +33,7 @@ function page() {
           };
           articleArray.push(articleObject);
         }
+
         console.log(articleArray, "***");
         setchangeValue(articleArray);
       });
