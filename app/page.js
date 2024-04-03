@@ -20,19 +20,21 @@ function page() {
         console.log(data, "response");
         const articlesData = data.articles;
 
-        let article;
-        for (let item of articlesData) {
-          article = item;
-          console.log(article, "articlesData[item]");
+        // for (let i = 0; i < articlesData.length; i++) {
+        //   const article = articlesData[i];
+        //   console.log(article, "article[i]");
 
+        let article
+        articlesData.forEach((element) =>{
           const articleObject = {
-            image: article.urlToImage,
-            title: article.title,
-            description: article.description,
-            url: article.url,
+            image: element.urlToImage,
+            title: element.title,
+            description: element.description,
+            url: element.url,
           };
           articleArray.push(articleObject);
-        }
+        })
+
 
         console.log(articleArray, "***");
         setchangeValue(articleArray);
@@ -50,3 +52,17 @@ function page() {
 }
 
 export default page;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
