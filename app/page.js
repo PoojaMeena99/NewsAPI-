@@ -4,65 +4,36 @@ import Header from "./header";
 import Searchbar from "./searchbar";
 import Grid from "./grid";
 import Footer from "./footer";
-import articles from "./article_data";
+import initial_articles from "./article_data";
 
 function page() {
-  const [changeValue, setchangeValue] = useState(articles);
-  const articleArray = [];
+  const [articles, setArticles] = useState(initial_articles);
 
-  const fetchData = function (input) {
-    console.log("start fatchinggggg...");
-    fetch(
-      `https://newsapi.org/v2/everything?q=${input}&sortBy=publishedAt&pageSize=10&apiKey=87b8452aff0942a3abff56c30c065893`
-    )
-      .then((response) => response.json())
-      .then((data) => {
-        console.log(data, "response");
-        const articlesData = data.articles;
+  const create_articles = function (search_articles) {
+    const new_articles = [];
 
-        // for (let i = 0; i < articlesData.length; i++) {
-        //   const article = articlesData[i];
-        //   console.log(article, "article[i]");
+    search_articles.forEach((search_article) => {
+      const new_article = {
+        image: search_article.urlToImage,
+        title: search_article.title,
+        discription: search_article.description,
+        url: search_article.url,
+      };
 
-        let article
-        articlesData.forEach((element) =>{
-          const articleObject = {
-            image: element.urlToImage,
-            title: element.title,
-            description: element.description,
-            url: element.url,
-          };
-          articleArray.push(articleObject);
-        })
-
-
-        console.log(articleArray, "***");
-        setchangeValue(articleArray);
-      });
+      new_articles.push(new_article);
+    });
+    console.log(new_articles,"new_arrr");
+    setArticles(new_articles);
   };
 
   return (
     <>
       <Header />
-      <Searchbar fetchData={fetchData} />
-      <Grid articles={changeValue} />
+      <Searchbar create_articles={create_articles} />
+      <Grid articles={articles} />
       <Footer />
     </>
   );
 }
 
 export default page;
-
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -1,7 +1,6 @@
 import React from "react";
 
 function Article({article}) {
-  // console.log(article,"1");
   return (
     <div className="article">
       <div>
