@@ -5,9 +5,7 @@ function Grid({ articles }) {
   // console.log(articles, "poojaa");
   return (
     <div className="container">
-      <div className="row news_heading ">
-        <span>TOP NEWS FROM INDIA</span>
-      </div>
+     
       <Article_row
         article1={articles[0]}
         article2={articles[1]}

@@ -37,10 +37,6 @@
         margin-bottom: 0px;
     }
 }    
-.news_heading{
-    color:#D02424;
-    margin-bottom:10px;
-}
 .search_row{
     margin:80px 0px 80px 0px;
 }
@@ -72,7 +68,11 @@
     color:white;
     border: none;
 }  
-
+.news_heading{
+    color:#D02424;
+    margin-left:453px;
+    margin-bottom: 15px;
+}
 .article_row{
     justify-content: space-between;
 }

@@ -44,3 +44,22 @@
 //     description: article.description,
 //     url: article.url,
 //   }));
+
+
+
+
+  // const create_articles = function (search_articles) {
+  //   const new_articles = [];
+
+  //   search_articles.forEach((search_article) => {
+  //     const new_article = {
+  //       image: search_article.urlToImage,
+  //       title: search_article.title,
+  //       discription: search_article.description,
+  //       url: search_article.url,
+  //     };
+
+  //     new_articles.push(new_article);
+  //   });
+
+//  

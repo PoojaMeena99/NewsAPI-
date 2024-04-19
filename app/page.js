@@ -1,32 +1,57 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Header from "./header";
 import Searchbar from "./searchbar";
 import Grid from "./grid";
 import Footer from "./footer";
-import initial_articles from "./article_data";
+// import initial_articles from "./article_data";
 
 function page() {
-  const [articles, setArticles] = useState(initial_articles);
+  const [articles, setArticles] = useState([]);
 
-  const create_articles = function (search_articles) {
-    const new_articles = [];
+  useEffect(() => {
+    function fatch_heading() {
+      console.log("headline fatchinggggg...");
+      fetch(
+        `https://newsapi.org/v2/top-headlines?country=us&apiKey=87b8452aff0942a3abff56c30c065893`
+      )
+        .then((response) => response.json())
+        .then((data) => {
+          create_articles(data.articles);
+          console.log(data.articles, "data")
+        });
+    };
+    fatch_heading()
+  }, []);
 
-    search_articles.forEach((search_article) => {
-      const new_article = {
-        image: search_article.urlToImage,
-        title: search_article.title,
-        discription: search_article.description,
-        url: search_article.url,
-      };
-
-      new_articles.push(new_article);
+  function create_articles(headline_data) {
+    console.log(headline_data, "headlinee")
+    let new_articles = headline_data.map((search_article) => ({
+      image: search_article.urlToImage,
+      title: search_article.title,
+      discription: search_article.description,
+      url: search_article.url,
+    })
+    )
+    const result = new_articles.filter((check) => {
+      return (
+        check.image !== null &&
+        check.title !== null &&
+        check.discription !== null &&
+        check.url !== null
+      );
     });
-    console.log(new_articles,"new_arrr");
-    setArticles(new_articles);
-  };
+    console.log(result, "articlessss")
+    setArticles(result)
+  }
 
+
+
+  if (articles.length === 0) {
+    return null;
+}
   return (
+    
     <>
       <Header />
       <Searchbar create_articles={create_articles} />
