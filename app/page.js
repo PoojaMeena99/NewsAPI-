@@ -9,7 +9,7 @@ import Footer from "./footer";
 function page() {
   const [articles, setArticles] = useState([]);
 
-  useEffect(function() {
+  useEffect(function () {
     console.log("headline fatchinggggg...");
     fetch(
       `https://newsapi.org/v2/top-headlines?country=us&apiKey=87b8452aff0942a3abff56c30c065893`

@@ -34,10 +34,11 @@ function Searchbar({ create_articles }) {
         <button className="go_btn" onClick={() => fetchData(input)}>
           Go
         </button>  
-      </div>
-      <div className="row news_heading">
+        <div className="row news_heading ">
         <span>{topheadline_text}</span>
       </div>
+      </div>
+    
     </>
   );
 }
