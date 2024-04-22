@@ -63,3 +63,14 @@
   //   });
 
 //  
+
+
+
+
+
+
+
+check.image !== null &&
+check.title !== null &&
+check.discription !== null &&
+check.url !== null

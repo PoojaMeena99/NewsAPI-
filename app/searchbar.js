@@ -3,7 +3,6 @@ import React, { useState } from "react";
 
 function Searchbar({ create_articles }) {
   const [input, setInput] = useState("");
-  const [ErrorMessage, setErrorMessage] = useState("")
   const [topheadline_text, setTopheadline_text] = useState("TOP NEWS FROM INDIA")
   console.log(input);
 
@@ -17,10 +16,6 @@ function Searchbar({ create_articles }) {
       .then((data) => {
         console.log(data, "response");
         create_articles(data.articles);
-      })
-      .catch((error) => {
-        setErrorMessage(error.message)
-        console.log(error.message)
       })
   };
   return (
