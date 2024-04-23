@@ -130,3 +130,84 @@ let article1_image = articles[0].image;
   // article9 = articles[8].title;
   // article9 = articles[8].discription;
   // article9 = articles[8].url;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  import React from "react";
+
+function News_article({ articles }) {
+  console.log(articles, "articles**for**articles")
+  if (articles !== null) 
+
+    return (
+      <>
+        {articles.map(function (displayarticle) {
+          console.log(displayarticle, "article[i]");
+          return (
+            <div className="col-lg-4">
+              <div className="article">
+                <div>
+                  <img className="img" src={displayarticle.image} alt="" />
+                </div>
+                <div className="news_title">
+                  {displayarticle.title}
+                </div>
+                <span className="news_discription">
+                  {displayarticle.description}
+                </span>
+                <br />
+                <div className="more_details">Read full article</div>
+                <a href={displayarticle.url}> <img className="ero" src="/ero.jpg" /> </a>
+              </div>
+            </div>
+          )
+        })
+        }
+      </>
+    )
+};
+
+export default News_article;
+
+
+
+
+
+import React from "react";
+import News_article from "./news_article";
+
+function Grid({ articles }) {
+  console.log(articles, "poojaa");
+  console.log(articles, "grid***articles")
+  return (
+    <div className="container">
+      <div className="row article_row">
+        <News_article
+          article={articles}
+        />
+      </div>
+    </div>
+  );
+}
+export default Grid;

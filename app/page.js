@@ -22,7 +22,7 @@ function page() {
   }, []);
 
   function create_articles(fetched_articles) {
-    console.log(fetched_articles, "headlinee")
+    console.log(fetched_articles, "headlinee");
 
     let new_articles = fetched_articles.map(function (fetched_article) {
       let new_article = {
@@ -44,8 +44,10 @@ function page() {
       ) {
         return true;
       }
-    });
-
+      return false;
+    }
+    );
+    
     console.log(filtered_articles, "filtered_articles");
     setArticles(filtered_articles);
   }
