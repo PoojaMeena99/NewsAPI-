@@ -2,6 +2,7 @@ import React from "react";
 
 function News_article({ article }) {
   console.log(article, "article**for**article")
+  console.log(article,"single article")
   if (article && article.length !== 0) {
     return (
       <>

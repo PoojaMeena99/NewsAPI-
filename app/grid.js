@@ -3,6 +3,7 @@ import News_article from "./news_article";
 
 function Grid({ articles }) {
   console.log(articles, "grid***articles")
+  console.log(articles,"display")
   return (
     <div className="container">
       <div className="row article_row">

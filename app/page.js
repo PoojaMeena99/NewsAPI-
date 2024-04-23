@@ -4,7 +4,6 @@ import Header from "./header";
 import Searchbar from "./searchbar";
 import Grid from "./grid";
 import Footer from "./footer";
-// import initial_articles from "./article_data";
 
 function page() {
   const [articles, setArticles] = useState([]);
@@ -47,7 +46,7 @@ function page() {
       return false;
     }
     );
-    
+
     console.log(filtered_articles, "filtered_articles");
     setArticles(filtered_articles);
   }
